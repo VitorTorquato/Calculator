@@ -1,0 +1,73 @@
+*::before,*::after{
+    box-sizing: border-box;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+
+}
+
+:root{
+    font-size: 62.5%;
+
+
+}
+
+body{
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+}
+
+#app{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    max-height:100vh ;
+    grid-template-columns:  repeat(4,80px);
+    grid-template-rows: minmax(100px , auto) repeat(5,80px);
+
+
+}
+
+#app > button{
+    font-size: 2rem;
+    border: 1px solid white;
+    background-color: rgba(225,225,225,.75);
+
+    cursor: pointer;
+}
+
+#app > button:hover{
+    background-color: rgba(225,225,225,.9);
+}
+.spanTwo{
+    grid-column: span 2;
+}
+
+#output{
+    grid-column:  1/ -1;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+#output #previousNumber{
+    font-size: 1.5rem;
+    color: white;
+}
+#output #currentNumber{
+    font-size: 2.5rem;
+    color: white;
+}
